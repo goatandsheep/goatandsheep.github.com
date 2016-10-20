@@ -6,50 +6,6 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<title>commu note built yet</title>
-		
-		<script>
-		
-		  window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '317142065142987',
-		      xfbml      : true,
-		      version    : 'v2.2'
-		    });
-		
-		    // ADD ADDITIONAL FACEBOOK CODE HERE
-		  };
-		
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-		   
-		function onLogin(response) {
-			if (response.status == 'connected') {
-				FB.api('/me?fields=first_name', function(data) {
-					var welcomeBlock = document.getElementById('fb-welcome');
-					welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
-				});
-			}
-		}
-
-FB.getLoginStatus(function(response) {
-  // Check login status on load, and if the user is
-  // already logged in, go directly to the welcome message.
-  if (response.status == 'connected') {
-    onLogin(response);
-  } else {
-    // Otherwise, show Login dialog first.
-    FB.login(function(response) {
-      onLogin(response);
-    }, {scope: 'user_friends, email'});
-  }
-});
-		   
-		</script>
 
 		<STYLE type=text/css>
     		A:link {
@@ -108,10 +64,12 @@ Testing out sharing/like/follow buttons here.
 
 <p>
 Note: we were considering putting sharing buttons on our site, but they have trackers and slow down your loading time. We're going to get images soon.
-
 </p>
-testing image duality: 
-<a href="assets/images/twitter.png" class="hoverZoomLink"><img src="assets/images/facebook.png" style="width:42px;height:42px"></a> 
+<p>
+	Optimize your web traffic <span id="testTyped">analytics</span>
+</p>
+testing image duality:
+<a href="assets/images/twitter.png" class="hoverZoomLink"><img src="assets/images/facebook.png" style="width:42px;height:42px"></a>
 <p>
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="350" height="60">
 <param name="movie" value="https://static343.depositfiles.com/flash/DepositUploader_350x60.swf?ref=goatandsheep&member_passkey=cc9nh6izkmknlka5&interfaceId=2&lang=EN&lang_xml=https%3A%2F%2Fstatic343.depositfiles.com%2Fflash%2FDepositUploader.xml"></param>
@@ -122,6 +80,10 @@ testing image duality:
 <param name="wmode" value="transparent"></param>
 <embed src="https://static343.depositfiles.com/flash/DepositUploader_350x60.swf?ref=goatandsheep&member_passkey=cc9nh6izkmknlka5&interfaceId=2&lang=EN&lang_xml=https%3A%2F%2Fstatic343.depositfiles.com%2Fflash%2FDepositUploader.xml" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" menu="false" scale="noScale" wmode="transparent" width="350" height="60"></embed>
 </object>
+<audio controls>
+  <source src="thesong.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 
 <script type="text/javascript">
     window._idl = {};
@@ -134,9 +96,60 @@ testing image duality:
         document.getElementsByTagName('body')[0].appendChild(idl);
     })();
 </script>
-	<iframe width="80%" height="1000em" right="10%" src="https://www.instagram.com/p/4HS84Eww77/embed/"></iframe>
+<script>
 
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '317142065142987',
+			xfbml      : true,
+			version    : 'v2.2'
+		});
+
+		// ADD ADDITIONAL FACEBOOK CODE HERE
+	};
+
+	(function(d, s, id){
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) {return;}
+		 js = d.createElement(s); js.id = id;
+		 js.src = "//connect.facebook.net/en_US/sdk.js";
+		 fjs.parentNode.insertBefore(js, fjs);
+	 }(document, 'script', 'facebook-jssdk'));
+
+function onLogin(response) {
+	if (response.status == 'connected') {
+		FB.api('/me?fields=first_name', function(data) {
+			var welcomeBlock = document.getElementById('fb-welcome');
+			welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+		});
+	}
+}
+
+FB.getLoginStatus(function(response) {
+// Check login status on load, and if the user is
+// already logged in, go directly to the welcome message.
+if (response.status == 'connected') {
+onLogin(response);
+} else {
+// Otherwise, show Login dialog first.
+FB.login(function(response) {
+	onLogin(response);
+}, {scope: 'user_friends, email'});
+}
+});
+
+</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+	<script>
+	    $(function(){
+	        $("#testTyped").typed({
+	            strings: ["analytics.", "conversions.", "results."],
+	            typeSpeed: 20,
+							loop: true
+	        });
+	    });
+	</script>
 	</body>
 
 </html>
-

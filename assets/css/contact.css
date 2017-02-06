@@ -20,8 +20,8 @@
     transition: all .6s ease-in-out;
 }
 .contact-item:hover i{
-    background-color: #4a148c;
-    border: 2px solid #4a148c !important;
+    background-color: #24bdd4;
+    border: 2px solid #24bdd4 !important;
     color: #fff;
 }
 .contact h3{

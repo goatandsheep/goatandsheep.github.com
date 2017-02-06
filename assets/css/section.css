@@ -36,6 +36,13 @@
     color: #313131;
 }
 
+.navbar-default .navbar-toggle {
+	border-color: #313131;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #313131;
+}
 
 
 .section-background{

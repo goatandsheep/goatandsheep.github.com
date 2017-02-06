@@ -1,5 +1,5 @@
 /*=================================================
-||				1. Imports 
+||				1. Imports
 ==================================================*/
 @import url(http://fonts.googleapis.com/css?family=Roboto:200,400,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
@@ -17,7 +17,7 @@ body
 	background: #fff ;
 }
 .purple{
-	background: #4a148c;
+	background: #24bdd4;
 }
 .section-wrapper{
 	padding-top: 90px;
@@ -261,7 +261,7 @@ body
 	transform: scale(1.1);
 }
 .portfolio-item-details{
-	margin: 20px 0px 50px; 
+	margin: 20px 0px 50px;
 }
 .portfolio-item-name{
 	display: inline-block;
@@ -335,16 +335,16 @@ footer{
 	display: inline-block;
 }
 .octocat{
-	background: #1976d2;
+	background: #000;
 }
 .twitter{
 	background: #2CAAE1;
 }
-.google{
-	background: #c62828;
+.wordpress{
+	background: #21759b;
 }
 .linkedin{
-	background: #ff8f00;
+	background: #0077b5;
 }
 
 .icon{
@@ -365,17 +365,21 @@ a .icon{
 a .icon:hover{
 	background: transparent;
 }
-a .fb:hover{
-	color: #1976d2;
-	border-color: #1976d2;
+a .octocat:hover{
+	color: #000;
+	border-color: #000;
 }
 a .twitter:hover{
 	color: #2CAAE1;
 	border-color: #2CAAE1;
 }
-a .google:hover{
-	color: #c62828;
-	border-color: #c62828;
+a .wordpress:hover{
+	color: #21759b;
+	border-color: #21759b;
+}
+a .linkedin:hover{
+	color: #0077b5;
+	border-color: #0077b5;
 }
 a .rss:hover{
 	color: #ff8f00;
@@ -481,7 +485,7 @@ a .rss:hover{
 	.quote{
 		padding: 0 15px;
 	}
-} 
+}
 @media (max-width: 480px){
 	.header-table{
 		max-height: 627px;
